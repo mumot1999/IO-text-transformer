@@ -1,7 +1,10 @@
 package pl.put.poznan.transformer.logic;
 
+import pl.put.poznan.transformer.logic.base.TextDecorator;
+import pl.put.poznan.transformer.logic.base.TextTransformerInterface;
+
 public class LowerCaseTransformer extends TextDecorator {
-    public LowerCaseTransformer(Text text) {
+    public LowerCaseTransformer(TextTransformerInterface text) {
         super(text);
     }
 
