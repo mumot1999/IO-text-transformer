@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/mumot1999/IO-text-transformer.svg?branch=master)](https://travis-ci.com/mumot1999/IO-text-transformer)
+
 # Informacje dot. projektu
 
 ## trello
