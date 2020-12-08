@@ -1,12 +1,12 @@
 package pl.put.poznan.transformer.logic;
 
 public class UpperCaseTransformer extends TextDecorator {
-    public UpperCaseTransformer(String text) {
+    public UpperCaseTransformer(TextTransformerInterface text) {
         super(text);
-        transform();
     }
 
-    private void transform(){
-        this.text = this.text.toUpperCase();
+    @Override
+    public String getText() {
+        return super.getText().toUpperCase();
     }
 }

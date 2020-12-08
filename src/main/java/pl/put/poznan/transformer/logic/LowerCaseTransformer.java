@@ -1,12 +1,12 @@
 package pl.put.poznan.transformer.logic;
 
 public class LowerCaseTransformer extends TextDecorator {
-    public LowerCaseTransformer(String text) {
+    public LowerCaseTransformer(Text text) {
         super(text);
-        transform();
     }
 
-    private void transform(){
-        this.text = this.text.toLowerCase();
+    @Override
+    public String getText() {
+        return super.getText().toLowerCase();
     }
 }

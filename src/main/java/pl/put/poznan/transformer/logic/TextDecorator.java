@@ -5,18 +5,14 @@ package pl.put.poznan.transformer.logic;
  */
 public abstract class TextDecorator implements TextTransformerInterface{
 
-    protected String text;
+    private final TextTransformerInterface text;
 
-    public TextDecorator(String text){
+    public TextDecorator(TextTransformerInterface text){
         this.text = text;
     }
 
-    public TextDecorator(TextDecorator text_decorator){
-        this.text = text_decorator.text;
-    }
-
     public String getText(){
-        return text;
+        return text.getText();
     }
 
 }
