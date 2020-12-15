@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:mumot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:mumot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="053cce25-1f68-4069-bb5f-5980cc58ad96" name="Default Changelist" comment="feat: test with multiple decorators">
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/transformer/logic/CapitalizedInversionTransformer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/unit/CapitalizedInversionTransformerTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="InvalidFacetManager">
+    <ignored-facets>
+      <facet id="io-project-architecture/invalid/Spring" />
+      <facet id="io-project-architecture/invalid/Web" />
+    </ignored-facets>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1lSvGrCuDwoqYljZugAX0fw3bSB" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+  </component>
+  <component name="RunManager" selected="JUnit.CapitalizedInversionTransformerTest">
+    <configuration name="CapitalizedInversionTransformerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="io-project-architecture" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unit" />
+      <option name="MAIN_CLASS_NAME" value="unit.CapitalizedInversionTransformerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MultipleTransformerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="io-project-architecture" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="unit.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="unit" />
+      <option name="MAIN_CLASS_NAME" value="unit.MultipleTransformerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.CapitalizedInversionTransformerTest" />
+        <item itemvalue="JUnit.MultipleTransformerTest" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="053cce25-1f68-4069-bb5f-5980cc58ad96" name="Default Changelist" comment="" />
+      <created>1607603235553</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1607603235553</updated>
+    </task>
+    <task id="LOCAL-00001" summary="feat: test with multiple decorators">
+      <created>1607609694875</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1607609694875</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="capitalized_inversion" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="capitalized_inversion" />
+                </option>
+              </RecentGroup>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="origin/master" />
+                </option>
+              </RecentGroup>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: test with multiple decorators" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: test with multiple decorators" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="1784" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607608363232">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1784" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1607608363232" />
+    <state x="1466" y="98" width="1720" height="882" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1608037981497">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1466" y="98" width="1720" height="882" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608037981497" />
+    <state x="2109" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1607604031484">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2109" y="297" width="424" height="484" key="FileChooserDialogImpl/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1607604031483" />
+    <state width="1874" height="287" key="GridCell.Tab.0.bottom" timestamp="1608037849657">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="287" key="GridCell.Tab.0.bottom/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608037849657" />
+    <state width="1874" height="287" key="GridCell.Tab.0.center" timestamp="1608037849657">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="287" key="GridCell.Tab.0.center/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608037849657" />
+    <state width="1874" height="287" key="GridCell.Tab.0.left" timestamp="1608037849657">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="287" key="GridCell.Tab.0.left/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608037849657" />
+    <state width="1874" height="287" key="GridCell.Tab.0.right" timestamp="1608037849657">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="287" key="GridCell.Tab.0.right/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608037849657" />
+    <state width="1874" height="354" key="GridCell.Tab.1.bottom" timestamp="1608034938676">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="354" key="GridCell.Tab.1.bottom/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608034938676" />
+    <state width="1874" height="354" key="GridCell.Tab.1.center" timestamp="1608034938676">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="354" key="GridCell.Tab.1.center/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608034938676" />
+    <state width="1874" height="354" key="GridCell.Tab.1.left" timestamp="1608034938676">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="354" key="GridCell.Tab.1.left/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608034938676" />
+    <state width="1874" height="354" key="GridCell.Tab.1.right" timestamp="1608034938676">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state width="1874" height="354" key="GridCell.Tab.1.right/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608034938676" />
+    <state x="1921" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1608035171733">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1921" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608035171733" />
+    <state x="2130" y="296" width="382" height="485" key="refactoring.ChangeSignatureDialog" timestamp="1607607679189">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="2130" y="296" width="382" height="485" key="refactoring.ChangeSignatureDialog/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1607607679189" />
+    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1607607733739">
+      <screen x="1366" y="0" width="1920" height="1080" />
+    </state>
+    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1607607733739" />
+  </component>
+  <component name="XDebuggerManager">
+    <pin-to-top-manager>
+      <pinned-members>
+        <PinnedItemInfo parentTag="pl.put.poznan.transformer.logic.CapitalizedInversionTransformer" memberName="text" />
+      </pinned-members>
+    </pin-to-top-manager>
+  </component>
+</project>
