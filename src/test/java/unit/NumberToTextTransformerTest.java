@@ -24,7 +24,9 @@ public class NumberToTextTransformerTest {
                 arguments("0,3", "trzy dziesiąte"),
                 arguments("0,4", "cztery dziesiąte"),
                 arguments("0,5", "pięć dziesiątych"),
-                arguments("0,01", "jedna setna")
+                arguments("0,01", "jedna setna"),
+                arguments("378,123", "trzysta siedemdziesiąt osiem i sto dwadzieścia trzy tysięcznych"),
+                arguments("100,08 zł", "sto i osiem setnych zł")
         );
     }
 
