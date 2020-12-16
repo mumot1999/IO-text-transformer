@@ -19,7 +19,12 @@ public class NumberToTextTransformerTest {
                 arguments("571", "pięćset siedemdziesiąt jeden"),
                 arguments("825", "osiemset dwadzieścia pięć"),
                 arguments("10,25", "dziesięć i dwadzieścia pięć setnych"),
-                arguments("0,08", "osiem setnych")
+                arguments("0,1", "jedna dziesiąta"),
+                arguments("0,2", "dwie dziesiąte"),
+                arguments("0,3", "trzy dziesiąte"),
+                arguments("0,4", "cztery dziesiąte"),
+                arguments("0,5", "pięć dziesiątych"),
+                arguments("0,01", "jedna setna")
         );
     }
 

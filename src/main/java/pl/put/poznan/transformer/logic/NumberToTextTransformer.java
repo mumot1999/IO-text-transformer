@@ -26,25 +26,45 @@ public class NumberToTextTransformer extends TextDecorator {
         }
     }
     private String translate(double liczba_x) {
-        Hashtable<String, String> my_dict = new Hashtable<String, String>();
-
-
         String[] parts = String.valueOf(liczba_x).split("\\.");
         String[] translations = {
-                "dziesiętych",
+                "dziesiątych",
                 "setnych",
                 "tysięcznych",
+        };
+
+        String[] translations_number_one = {
+                "dziesiąta",
+                "setna",
+                "tysięczna",
+        };
+
+        String[] translations_number_two_four = {
+                "dziesiąte",
+                "setne",
+                "tysięczne",
         };
 
         String result = translate_((int)liczba_x);
         int i = Integer.parseInt(parts[1]);
         if(i != 0){
             result += " i ";
+
             if((int)liczba_x == 0){
                 result = "";
             }
-            result += translate_(i);
-            result += " " + translations[parts[1].length()-1];
+
+            if( i == 1){
+                result += "jedna " + translations_number_one[parts[1].length()-1];
+            }else if (i == 2){
+                result += "dwie " + translations_number_two_four[parts[1].length()-1];
+            }else if (i == 3 || i == 4){
+                result += translate_(i) + " " + translations_number_two_four[parts[1].length()-1];
+            }else{
+
+                result += translate_(i);
+                result += " " + translations[parts[1].length()-1];
+            }
         }
 
 
