@@ -19,13 +19,13 @@ public class CapitalizedInversionTransformerTest {
 
     static Stream<Arguments> transformsArgumentsProvider() {
         return Stream.of(
-                arguments("DuużOpRoJektów", "WótkEjOrPożuud"),
+                arguments("MirEk", "KerIm"),
+                arguments("abC", "cbA"),
                 arguments("", ""),
-                arguments("DDDDD", "DDDDD"),
-                arguments("ddddd", "ddddd"),
+                arguments("Dd", "Dd"),
                 arguments("-1", "1-"),
                 arguments("\n", "\n"),
-                arguments("\t\nalamakotA\t", "\tatokamala\n\t"),
+                arguments("\n\t\t", "\t\t\n"),
                 arguments(" D D", "d d ")
         );
     }
