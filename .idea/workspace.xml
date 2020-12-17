@@ -36,13 +36,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="053cce25-1f68-4069-bb5f-5980cc58ad96" name="Default Changelist" comment="feat: test with multiple decorators">
-      <change afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/transformer/logic/base/LatexTransformer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/unit/LatexTransformerTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/io-project-architecture.iml" beforeDir="false" afterPath="$PROJECT_DIR$/io-project-architecture.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/unit/MultipleTransformerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/unit/MultipleTransformerTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/transformer/logic/base/LatexTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/transformer/logic/LatexTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/unit/LatexTransformerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unit/LatexTransformerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,20 +67,21 @@
       <facet id="io-project-architecture/invalid/Web" />
     </ignored-facets>
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
-      </MavenGeneralSettings>
-    </option>
-  </component>
   <component name="ProjectId" id="1lSvGrCuDwoqYljZugAX0fw3bSB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RunManager" selected="JUnit.LatexTransformerTest">
     <configuration name="CapitalizedInversionTransformerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
@@ -193,64 +191,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: test with multiple decorators" />
     <option name="LAST_COMMIT_MESSAGE" value="feat: test with multiple decorators" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="1784" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607608363232">
-      <screen x="1366" y="0" width="1920" height="1080" />
-    </state>
-    <state x="1784" y="197" key="#com.intellij.execution.impl.EditConfigurationsDialog/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1607608363232" />
-    <state x="1466" y="98" width="1720" height="882" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1608037981497">
-      <screen x="1366" y="0" width="1920" height="1080" />
-    </state>
-    <state x="1466" y="98" width="1720" height="882" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608037981497" />
-    <state x="2109" y="297" width="424" height="484" key="FileChooserDialogImpl" timestamp="1607604031484">
-      <screen x="1366" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2109" y="297" width="424" height="484" key="FileChooserDialogImpl/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1607604031483" />
-    <state width="1874" height="287" key="GridCell.Tab.0.bottom" timestamp="1608123033573">
-      <screen x="1366" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="287" key="GridCell.Tab.0.bottom/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608123033573" />
-    <state width="1874" height="287" key="GridCell.Tab.0.center" timestamp="1608123033573">
-      <screen x="1366" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="287" key="GridCell.Tab.0.center/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608123033573" />
-    <state width="1874" height="287" key="GridCell.Tab.0.left" timestamp="1608123033573">
-      <screen x="1366" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="287" key="GridCell.Tab.0.left/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608123033573" />
-    <state width="1874" height="287" key="GridCell.Tab.0.right" timestamp="1608123033573">
-      <screen x="1366" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="287" key="GridCell.Tab.0.right/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608123033573" />
-    <state width="1874" height="354" key="GridCell.Tab.1.bottom" timestamp="1608034938676">
-      <screen x="1366" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="354" key="GridCell.Tab.1.bottom/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608034938676" />
-    <state width="1874" height="354" key="GridCell.Tab.1.center" timestamp="1608034938676">
-      <screen x="1366" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="354" key="GridCell.Tab.1.center/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608034938676" />
-    <state width="1874" height="354" key="GridCell.Tab.1.left" timestamp="1608034938676">
-      <screen x="1366" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="354" key="GridCell.Tab.1.left/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608034938676" />
-    <state width="1874" height="354" key="GridCell.Tab.1.right" timestamp="1608034938676">
-      <screen x="1366" y="0" width="1920" height="1080" />
-    </state>
-    <state width="1874" height="354" key="GridCell.Tab.1.right/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608034938676" />
-    <state x="1921" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1608035171733">
-      <screen x="1366" y="0" width="1920" height="1080" />
-    </state>
-    <state x="1921" y="275" width="800" height="528" key="Vcs.Push.Dialog.v2/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1608035171733" />
-    <state x="2130" y="296" width="382" height="485" key="refactoring.ChangeSignatureDialog" timestamp="1607607679189">
-      <screen x="1366" y="0" width="1920" height="1080" />
-    </state>
-    <state x="2130" y="296" width="382" height="485" key="refactoring.ChangeSignatureDialog/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1607607679189" />
-    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1607607733739">
-      <screen x="1366" y="0" width="1920" height="1080" />
-    </state>
-    <state x="1989" y="237" width="672" height="678" key="search.everywhere.popup/67.339.1299.741/1366.0.1920.1080@1366.0.1920.1080" timestamp="1607607733739" />
   </component>
   <component name="XDebuggerManager">
     <pin-to-top-manager>
