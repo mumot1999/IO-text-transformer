@@ -36,9 +36,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="053cce25-1f68-4069-bb5f-5980cc58ad96" name="Default Changelist" comment="feat: test with multiple decorators">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/io-project-architecture.iml" beforeDir="false" afterPath="$PROJECT_DIR$/io-project-architecture.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/transformer/logic/base/LatexTransformer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/transformer/logic/LatexTransformer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/unit/LatexTransformerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/unit/LatexTransformerTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -66,6 +67,13 @@
       <facet id="io-project-architecture/invalid/Spring" />
       <facet id="io-project-architecture/invalid/Web" />
     </ignored-facets>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
+    </option>
   </component>
   <component name="ProjectId" id="1lSvGrCuDwoqYljZugAX0fw3bSB" />
   <component name="ProjectViewState">

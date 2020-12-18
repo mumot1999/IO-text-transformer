@@ -20,7 +20,7 @@ public class LatexTransformerTest {
                 arguments("^~\\", "\\textasciicircum\\textasciitilde\\textbackslash"),
                 arguments("", ""),
                 arguments("brak znakow specjalnych" , "brak znakow specjalnych"),
-                arguments("\n\t\s", "\n\t\s"),
+                arguments("\n\t", "\n\t"),
                 arguments("\\n\\t\\s", "\\textbackslashn\\textbackslasht\\textbackslashs"),
                 arguments("\\\\", "\\textbackslash\\textbackslash")
         );
