@@ -1,6 +1,5 @@
 package unit;
 
-import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import pl.put.poznan.transformer.logic.TextTransformerService;
