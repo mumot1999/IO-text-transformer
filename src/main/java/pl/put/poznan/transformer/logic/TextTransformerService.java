@@ -3,23 +3,31 @@ package pl.put.poznan.transformer.logic;
 import pl.put.poznan.transformer.logic.base.Text;
 import pl.put.poznan.transformer.logic.base.TextTransformerInterface;
 
-import java.lang.reflect.Type;
-import java.util.Collections;
+import java.lang.reflect.InvocationTargetException;
+import java.util.HashMap;
 import java.util.Map;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class TextTransformerService {
-    private static final Map<String, Class> transformNames = null;
+//    Map<String, String> data = new HashMap<>();
+
+    private Map<String, Class> transformNames = new HashMap<>();
     public TextTransformerService(){
-//        transformNames.put("upper", UpperCaseTransformer.class);
+        transformNames.put("acronym", AcronymTransformer.class);
+        transformNames.put("capitalize_inversion", CapitalizedInversionTransformer.class);
+        transformNames.put("capitalize", CapitalizeTransformer.class);
+        transformNames.put("latex", LatexTransformer.class);
+        transformNames.put("lower", LowerCaseTransformer.class);
+        transformNames.put("number_to_text", NumberToTextTransformer.class);
+        transformNames.put("text_to_acronym", TextToAcronymTransformer.class);
+        transformNames.put("upper", UpperCaseTransformer.class);
     }
 
-    public String transformText(String text, String[] transformers){
+    public String transformText(String text, String[] transformers) throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException {
         TextTransformerInterface _text = new Text(text);
 
         for (String transformer: transformers) {
-            _text = new UpperCaseTransformer(_text);
+//            Class.forName(this.transformNames.get(transformer).name).getDeclaredConstructors()[0].newInstance(_text)
+            _text = (TextTransformerInterface) this.transformNames.get(transformer).getDeclaredConstructors()[0].newInstance(_text);
         }
 
         return _text.getText();
