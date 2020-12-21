@@ -8,8 +8,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class TextTransformerService {
-//    Map<String, String> data = new HashMap<>();
-
     private Map<String, Class> transformNames = new HashMap<>();
     public TextTransformerService(){
         transformNames.put("acronym", AcronymTransformer.class);
@@ -18,6 +16,7 @@ public class TextTransformerService {
         transformNames.put("latex", LatexTransformer.class);
         transformNames.put("lower", LowerCaseTransformer.class);
         transformNames.put("number_to_text", NumberToTextTransformer.class);
+        transformNames.put("repetition_elimination", RepetitionEliminationTransformer.class);
         transformNames.put("text_to_acronym", TextToAcronymTransformer.class);
         transformNames.put("upper", UpperCaseTransformer.class);
     }
@@ -26,7 +25,6 @@ public class TextTransformerService {
         TextTransformerInterface _text = new Text(text);
 
         for (String transformer: transformers) {
-//            Class.forName(this.transformNames.get(transformer).name).getDeclaredConstructors()[0].newInstance(_text)
             _text = (TextTransformerInterface) this.transformNames.get(transformer).getDeclaredConstructors()[0].newInstance(_text);
         }
 
