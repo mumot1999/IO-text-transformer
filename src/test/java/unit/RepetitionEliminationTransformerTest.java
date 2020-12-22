@@ -24,7 +24,8 @@ public class RepetitionEliminationTransformerTest {
                 arguments("Du du du duuum!", "Du du duuum!"),
                 arguments("Cyberpunk Cyberpunk Cyberpunk Cyberpunk 2077", "Cyberpunk 2077"),
                 arguments("❄︎⍓︎◻︎♏︎ ⍓︎□︎◆︎❒︎ ⧫︎♏︎⌧︎⧫︎ ⧫︎♏︎⌧︎⧫︎ ⧫︎♏︎⌧︎⧫︎ ⧫︎♏︎⌧︎⧫︎ ♒︎♏︎❒︎♏︎", "❄︎⍓︎◻︎♏︎ ⍓︎□︎◆︎❒︎ ⧫︎♏︎⌧︎⧫︎ ♒︎♏︎❒︎♏︎"),
-                arguments("≻≼≽≾ ≻≼≽≾ ≻≼≽≾ ≻≼≽≾ ≿⊁ ≿⊁ ⊂⊃ ⊄⊅ ⊄⊅", "≻≼≽≾ ≿⊁ ⊂⊃ ⊄⊅")
+                arguments("≻≼≽≾ ≻≼≽≾ ≻≼≽≾ ≻≼≽≾ ≿⊁ ≿⊁ ⊂⊃ ⊄⊅ ⊄⊅", "≻≼≽≾ ≿⊁ ⊂⊃ ⊄⊅"),
+                arguments("asd\nasd", "asd")
         );
     }
 
