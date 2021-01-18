@@ -1,6 +1,7 @@
 package unit;
 
 import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.Arguments;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -18,7 +19,6 @@ public class LatexTransformerTest {
                 arguments("%&$", "\\%\\&\\$"),
                 arguments("{}_", "\\{\\}\\_"),
                 arguments("^~\\", "\\textasciicircum\\textasciitilde\\textbackslash"),
-                arguments("", ""),
                 arguments("brak znakow specjalnych" , "brak znakow specjalnych"),
                 arguments("\n\t", "\n\t"),
                 arguments("\\n\\t\\s", "\\textbackslashn\\textbackslasht\\textbackslashs"),
@@ -30,7 +30,17 @@ public class LatexTransformerTest {
     @MethodSource("transformsArgumentsProvider")
     void shouldTransform(String in, String out) {
         String transformed_text = new LatexTransformer(new Text(in)).getText();
+        Assertions.assertEquals(out, transformed_text);
+    }
 
-        Assertions.assertEquals(transformed_text, out);
+    @Test
+    void latexTransformerAcceptanceCriterion(){
+        Assertions.assertEquals("\\&", new LatexTransformer(new Text("&")).getText());
+        Assertions.assertEquals("\\$", new LatexTransformer(new Text("$")).getText());
+    }
+
+    @Test
+    void latexTransformerEmptyTest(){
+        Assertions.assertEquals("", new LatexTransformer(new Text("")).getText());
     }
 }

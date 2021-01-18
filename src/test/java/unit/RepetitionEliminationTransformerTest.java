@@ -17,10 +17,7 @@ public class RepetitionEliminationTransformerTest {
 
     static Stream<Arguments> transformsArgumentsProvider() {
         return Stream.of(
-                arguments("Wyślij do do mnie wiadomość", "Wyślij do mnie wiadomość"),
-                arguments("do do do", "do"),
-                arguments("do do", "do"),
-                arguments("do do po po", "do po"),
+                arguments("Wyślij do do mnie wiadomość!", "Wyślij do mnie wiadomość!"),
                 arguments("Du du du duuum!", "Du du duuum!"),
                 arguments("Cyberpunk Cyberpunk Cyberpunk Cyberpunk 2077", "Cyberpunk 2077"),
                 arguments("❄︎⍓︎◻︎♏︎ ⍓︎□︎◆︎❒︎ ⧫︎♏︎⌧︎⧫︎ ⧫︎♏︎⌧︎⧫︎ ⧫︎♏︎⌧︎⧫︎ ⧫︎♏︎⌧︎⧫︎ ♒︎♏︎❒︎♏︎", "❄︎⍓︎◻︎♏︎ ⍓︎□︎◆︎❒︎ ⧫︎♏︎⌧︎⧫︎ ♒︎♏︎❒︎♏︎"),
@@ -34,6 +31,17 @@ public class RepetitionEliminationTransformerTest {
     void shouldTransform(String in, String out) {
         String transformed_text = new RepetitionEliminationTransformer(new Text(in)).getText();
 
-        Assertions.assertEquals(transformed_text, out);
+        Assertions.assertEquals(out, transformed_text);
+    }
+
+    @Test
+    void repetitionEliminationTransformerAcceptanceCriterion(){
+        Assertions.assertEquals("do", new RepetitionEliminationTransformer(new Text("do do")).getText());
+        Assertions.assertEquals("do", new RepetitionEliminationTransformer(new Text("do do do")).getText());
+        Assertions.assertEquals("do po", new RepetitionEliminationTransformer(new Text("do do po po")).getText());
+    }
+
+    void repetitionEliminationTransformerEmptyTest(){
+        Assertions.assertEquals("", new RepetitionEliminationTransformer(new Text("")).getText());
     }
 }

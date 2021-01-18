@@ -39,7 +39,7 @@ public class AcronymTransformer extends TextDecorator {
     private String translate(String word) {
         Translation[] translationsArray = new Translation[5];
         translationsArray[0] = new Translation("prof.", "profesor");
-        translationsArray[1] = new Translation("dr.", "doktor");
+        translationsArray[1] = new Translation("dr", "doktor");
         translationsArray[2] = new Translation("np.", "na przykład");
         translationsArray[3] = new Translation("itp.", "i tym podobne");
         translationsArray[4] = new Translation("itd.", "i tak dalej");

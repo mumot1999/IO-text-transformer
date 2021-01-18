@@ -24,9 +24,9 @@ class AcronymTransformerTest {
                 arguments("np. chleb", "na przykład chleb"),
                 arguments("NP. chleb", "Na Przykład chleb"),
                 arguments("nP. chleb", "na Przykład chleb"),
-                arguments("dr. Maciej", "doktor Maciej"),
-                arguments("dR. Maciej", "doktor Maciej"),
-                arguments("DR. Maciej", "Doktor Maciej"),
+                arguments("dr Maciej", "doktor Maciej"),
+                arguments("dR Maciej", "doktor Maciej"),
+                arguments("DR Maciej", "Doktor Maciej"),
                 arguments("chleb itp.", "chleb i tym podobne"),
                 arguments("chleb Itp.", "chleb I tym podobne"),
                 arguments("chleb iTp.", "chleb i Tym podobne"),
@@ -36,7 +36,8 @@ class AcronymTransformerTest {
                 arguments("chleb Itd.", "chleb I tak dalej"),
                 arguments("chleb iTd.", "chleb i Tak dalej"),
                 arguments("chleb itD.", "chleb i tak Dalej"),
-                arguments("chleb ITD.", "chleb I Tak Dalej")
+                arguments("chleb ITD.", "chleb I Tak Dalej"),
+                arguments("Druga była Dr Jones.", "Druga była Doktor Jones.")
         );
     }
 
@@ -44,7 +45,20 @@ class AcronymTransformerTest {
     @MethodSource("transformsArgumentsProvider")
     void shouldTransform(String in, String out) {
         String transformed_text = new AcronymTransformer(new Text(in)).getText();
-
         Assertions.assertEquals(out, transformed_text);
+    }
+
+    @Test
+    void acronymTransformerAcceptanceCriterion(){
+        Assertions.assertEquals("profesor", new AcronymTransformer(new Text("prof.")).getText());
+        Assertions.assertEquals("doktor", new AcronymTransformer(new Text("dr")).getText());
+        Assertions.assertEquals("na przykład", new AcronymTransformer(new Text("np.")).getText());
+        Assertions.assertEquals("i tym podobne", new AcronymTransformer(new Text("itp.")).getText());
+        Assertions.assertEquals("Na przykład", new AcronymTransformer(new Text("Np.")).getText());
+    }
+
+    @Test
+    void acronymTransformerEmptyTest(){
+        Assertions.assertEquals("", new AcronymTransformer(new Text("")).getText());
     }
 }
