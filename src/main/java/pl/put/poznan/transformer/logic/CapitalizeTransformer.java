@@ -13,11 +13,16 @@ public class CapitalizeTransformer extends TextDecorator {
     @Override
     public String getText() {
         return String.join(" ",
-            Arrays.stream(super.getText().toLowerCase().split(" ")).map(this::firstLetterToUpperCase).toArray(String[]::new)
+                Arrays.stream(super.getText().toLowerCase().split(" ")).map(this::firstLetterToUpperCase).toArray(String[]::new)
         );
     }
 
     private String firstLetterToUpperCase(String text){
-        return text.substring(0, 1).toUpperCase() + text.substring(1);
+        if(text == ""){
+            return "";
+        }
+        else{
+            return text.substring(0, 1).toUpperCase() + text.substring(1);
+        }
     }
 }

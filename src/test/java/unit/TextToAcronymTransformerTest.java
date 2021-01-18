@@ -26,7 +26,9 @@ class TextToAcronymTransformerTest {
                 arguments("chleb i tak Dalej", "chleb itd."),
                 arguments("chleb między innymi", "chleb m.in."),
                 arguments("chleb między innymi", "chleb m.in."),
-                arguments("chleb między innymi", "chleb m.in.")
+                arguments("chleb między innymi", "chleb m.in."),
+                arguments("Przykład nad przykłady!", "Przykład nad przykłady!"),
+                arguments("Na przykładowym stole leży obrus.", "Na przykładowym stole leży obrus.")
 
         );
     }
@@ -35,7 +37,17 @@ class TextToAcronymTransformerTest {
     @MethodSource("transformsArgumentsProvider")
     void shouldTransform(String in, String out) {
         String transformed_text = new TextToAcronymTransformer(new Text(in)).getText();
-
         Assertions.assertEquals(out, transformed_text);
+    }
+
+    @Test
+    void textToAcronymTransformerAcceptanceCriterion(){
+        Assertions.assertEquals("np.", new TextToAcronymTransformer(new Text("na przykład")).getText());
+        Assertions.assertEquals("m.in.", new TextToAcronymTransformer(new Text("między innymi")).getText());
+        Assertions.assertEquals("itp.", new TextToAcronymTransformer(new Text("i tym podobne")).getText());
+    }
+
+    void textToAcronymTransformerEmptyTest(){
+        Assertions.assertEquals("", new TextToAcronymTransformer(new Text("")).getText());
     }
 }
