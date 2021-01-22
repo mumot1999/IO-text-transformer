@@ -6,11 +6,27 @@ import pl.put.poznan.transformer.logic.base.TextTransformerInterface;
 import java.util.Arrays;
 import java.util.Hashtable;
 
+/**
+ * NumberToTextTransformer is a subclass (concrete decorator) which takes a text string and replaces its all numbers with Polish numeral words.
+ * It supports all integers from -1000 to 1000 (and unofficialy some more).
+ * It also handles decimal fractions with up to 3 digits after a comma ','.
+ * It extends TextDecorator.
+ * @see TextDecorator
+ */
 public class NumberToTextTransformer extends TextDecorator {
+
+    /**
+     * Constructor of NumberToTextTransformer.
+     * @param text The text in which all numbers will be replaced with Polish numeral words.
+     */
     public NumberToTextTransformer(TextTransformerInterface text) {
         super(text);
     }
 
+    /**
+     * Main method of the class NumberToTextTransformer.
+     * @return String in which all numbers are replaced with Polish numeral words.
+     */
     @Override
     public String getText() {
         return String.join(" ",

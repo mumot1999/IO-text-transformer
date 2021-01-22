@@ -9,7 +9,18 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+/**
+ * LatexTransformer is a subclass (concrete decorator) which takes a text string and transforms it to a Latex-supported form in terms of special characters.
+ * It supports characters like: \, &amp;, %, $, #, _, {, }, ~, ^.
+ * It extends TextDecorator.
+ * @see TextDecorator
+ */
 public class LatexTransformer extends TextDecorator{
+
+    /**
+     * Constructor of LatexTransformer.
+     * @param text  The text that will be transformed to a Latex-supported form in terms of special characters.
+     */
     public LatexTransformer(TextTransformerInterface text){ super(text);}
 
     private static final  Map<String, String> latexDictionary = Stream.of(new String[][]{
@@ -27,6 +38,10 @@ public class LatexTransformer extends TextDecorator{
             Collections::<String, String> unmodifiableMap
     ));
 
+    /**
+     * Main method of the class LatexTransformer.
+     * @return String in a Latex-supported form in terms of special characters.
+     */
     @Override
     public String getText(){
 
