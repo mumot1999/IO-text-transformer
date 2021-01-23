@@ -22,9 +22,9 @@ interface Props {
 }
 
 export default (props: Props) => {
-    return   <>
+    return   <div style={{display: 'flex', margin: "2em 0"}}>
         <Dropdown
-            placeholder='Select Country'
+            placeholder='Wybierz transformator'
             fluid
             search
             selection
@@ -35,5 +35,5 @@ export default (props: Props) => {
         <Button icon onClick={props.onDelete}>
             <Icon name={'delete'}/>
         </Button>
-        </>
+        </div>
 }

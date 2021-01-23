@@ -1,7 +1,7 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import './App.css';
 import SelectTransformer from "./SelectTransformer";
-import {Button, Container, Input} from "semantic-ui-react";
+import {Button, Container, Divider, Input, Message} from "semantic-ui-react";
 import useFetch from 'use-http'
 
 interface SelectHook {
@@ -44,21 +44,25 @@ const SelectBag = (props: {hook: SelectHook}) => {
                 onDelete={hook.handleDelete(index)}
             />
         ))}
-        <Button fluid content={"Dodaj"} onClick={() => hook.addNew()}/>
+        <Button fluid content={"Dodaj transformator"} onClick={() => hook.addNew()}/>
     </>
 }
 
 function App() {
     const hook = useSelectHook();
     const [text, setText] = useState("")
-    const {post} = useFetch("http://localhost:8080")
+    const {post, response} = useFetch("http://localhost:8080/transform")
+
+    useEffect(() => {
+        post({transforms: hook.options.filter(x => x), text})
+    }, [text, hook.options])
 
     return (
         <Container>
             <Input label={'Tekst'} fluid value={text} onChange={(event, data) => setText(data.value)}/>
-            {JSON.stringify(hook.options)}
             <SelectBag hook={hook}/>
-            <Button content={"Transformuj"} onClick={() => post({transforms: hook.options.filter(x => x), text})}/>
+            <Divider />
+            {response.data?.text && <Message>{response.data.text}</Message>}
         </Container>
     );
 }
