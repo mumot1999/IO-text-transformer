@@ -9,7 +9,6 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.Map;
 
-
 @RestController
 @RequestMapping("/transform")
 public class TextTransformerController {
@@ -34,6 +33,7 @@ public class TextTransformerController {
         public String[] transforms;
     }
 
+    @CrossOrigin
     @RequestMapping(method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
     public Map post(@RequestBody Body body) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
         TextTransformerService textTransformerService = new TextTransformerService();
@@ -43,7 +43,6 @@ public class TextTransformerController {
 
         // perform the transformation, you should run your logic here, below is just a silly example
     }
-
 
 
 }
