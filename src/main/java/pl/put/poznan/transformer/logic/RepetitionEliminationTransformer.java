@@ -11,12 +11,12 @@ import java.util.List;
  * RepetitionEliminationTransformer is a subclass which takes a text string and returns a string with neighbouring repeated words eliminated.
  * It works for any number of neighbouring repeating words.
  * Supports UTF-8 encoding.
- * It extends:
+ * It extends TextDecorator.
  * @see TextDecorator
  */
 public class RepetitionEliminationTransformer extends TextDecorator {
     /**
-     * Constructor of RepetitionEliminationTransformer
+     * Constructor of RepetitionEliminationTransformer.
      * @param text  The text in which neighbouring repeated words will be eliminated.
      */
     public RepetitionEliminationTransformer(TextTransformerInterface text) {

@@ -5,10 +5,24 @@ import pl.put.poznan.transformer.logic.base.TextTransformerInterface;
 
 import java.util.ArrayList;
 
+/**
+ * CapitalizedInversionTransformer is a subclass (concrete decorator) which takes a text string and returns an inverse string with preserved positions of upper case and lower case letters.
+ * Supports UTF-8 encoding.
+ * It extends TextDecorator.
+ * @see TextDecorator
+ */
 public class CapitalizedInversionTransformer extends TextDecorator{
 
+    /**
+     * Constructor of CapitalizedInversionTransformer.
+     * @param text  The text that will be inverted with preserved positions of upper case and lower case letters.
+     */
     public CapitalizedInversionTransformer(TextTransformerInterface text){ super(text);}
 
+    /**
+     * Main method of the class CapitalizedInversionTransformer.
+     * @return Inverted string with preserved positions of upper case and lower case letters.
+     */
     @Override
     public String getText(){
 
