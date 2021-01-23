@@ -1,8 +1,10 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import './App.css';
 import SelectTransformer from "./SelectTransformer";
 import {Button, Container, Divider, Input, Message} from "semantic-ui-react";
 import useFetch from 'use-http'
+import { useDrag } from 'react-dnd'
+import update from 'immutability-helper'
 
 interface SelectHook {
     options: string[],
@@ -10,6 +12,7 @@ interface SelectHook {
     handleOnSelect: (id: number) => (value: string) => void
     handleDelete: (id: number) => () => void
     addNew: () => void
+    moveCard: (dragIndex: number, hoverIndex: number) => void
 }
 
 const useSelectHook = () : SelectHook => {
@@ -28,17 +31,35 @@ const useSelectHook = () : SelectHook => {
         setOptions(prevState => [...prevState, ""])
     }
 
-    return {options, setOptions, handleOnSelect, handleDelete, addNew}
+    const moveCard = useCallback(
+        (dragIndex: number, hoverIndex: number) => {
+            const dragCard = options[dragIndex]
+            setOptions(
+                update(options, {
+                    $splice: [
+                        [dragIndex, 1],
+                        [hoverIndex, 0, dragCard],
+                    ],
+                }),
+            )
+        },
+        [options],
+    )
+
+    return {options, setOptions, handleOnSelect, handleDelete, addNew, moveCard}
 }
 
 
 
 const SelectBag = (props: {hook: SelectHook}) => {
     const {hook} = props
+
     return <>
         {hook.options.map((opt,index) => (
             <SelectTransformer
-                key={index}
+                moveCard={hook.moveCard}
+                index={index}
+                id={opt}
                 onSelect={hook.handleOnSelect(index)}
                 value={opt}
                 onDelete={hook.handleDelete(index)}
