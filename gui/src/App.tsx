@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import SelectTransformer from "./SelectTransformer";
 import {Button, Container, Input} from "semantic-ui-react";
+import useFetch from 'use-http'
 
 interface SelectHook {
     options: string[],
@@ -49,15 +50,15 @@ const SelectBag = (props: {hook: SelectHook}) => {
 
 function App() {
     const hook = useSelectHook();
-
-
+    const [text, setText] = useState("")
+    const {post} = useFetch("http://localhost:8080")
 
     return (
         <Container>
-            <Input label={'Tekst'} fluid/>
+            <Input label={'Tekst'} fluid value={text} onChange={(event, data) => setText(data.value)}/>
             {JSON.stringify(hook.options)}
             <SelectBag hook={hook}/>
-            <Button content={"Transformuj"}/>
+            <Button content={"Transformuj"} onClick={() => post({transforms: hook.options.filter(x => x), text})}/>
         </Container>
     );
 }
