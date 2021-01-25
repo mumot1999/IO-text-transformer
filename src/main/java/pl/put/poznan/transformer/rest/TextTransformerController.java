@@ -3,6 +3,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
 import pl.put.poznan.transformer.logic.TextTransformerService;
+import pl.put.poznan.transformer.logic.TransformerProvider;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.Arrays;
@@ -20,7 +21,7 @@ public class TextTransformerController {
     @RequestMapping(value = "/{text}", method = RequestMethod.GET, produces = "application/json")
     public Map get(@PathVariable String text,
                    @RequestParam(value="transforms", defaultValue="upper") String[] transforms) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-        TextTransformerService textTransformerService = new TextTransformerService();
+        TextTransformerService textTransformerService = new TextTransformerService(new TransformerProvider());
 
         // log the parameters
         logger.debug(text);
@@ -36,7 +37,7 @@ public class TextTransformerController {
     @CrossOrigin
     @RequestMapping(method = RequestMethod.POST, produces = "application/json", consumes = "application/json")
     public Map post(@RequestBody Body body) throws InvocationTargetException, NoSuchMethodException, InstantiationException, IllegalAccessException {
-        TextTransformerService textTransformerService = new TextTransformerService();
+        TextTransformerService textTransformerService = new TextTransformerService(new TransformerProvider());
 
         // log the parameters
         return Collections.singletonMap("text", textTransformerService.transformText(body.text, body.transforms));
