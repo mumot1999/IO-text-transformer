@@ -75,4 +75,44 @@ public class TransformerServiceTestMock {
         inOrder.verify(mock).getTransformer(t[1]);
         inOrder.verify(mock).getTransformer(t[2]);
     }
+
+    @Test
+    public void noTransformationTest() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException{
+
+        TransformerProvider mock = mock(TransformerProvider.class);
+
+        TextTransformerService service = new TextTransformerService(mock);
+
+        String t[] = {};
+        String text = "foo";
+
+        doReturn(CapitalizeTransformer.class).when(mock).getTransformer("capitalize");
+        doReturn(UpperCaseTransformer.class).when(mock).getTransformer("upper");
+        doReturn(LowerCaseTransformer.class).when(mock).getTransformer("lower");
+
+        service.transformText(text, t);
+
+        verify(mock, times(0)).getTransformer("capitalize");
+        verify(mock, times(0)).getTransformer("upper");
+        verify(mock, times(0)).getTransformer("lower");
+    }
+
+    @Test
+    public void noOptimalizationTest() throws NoSuchMethodException, IllegalAccessException, InvocationTargetException, InstantiationException{
+
+        TransformerProvider mock = mock(TransformerProvider.class);
+
+        TextTransformerService service = new TextTransformerService(mock);
+
+        String t[] = {"upper", "lower", "upper", "lower"};
+        String text = "foo";
+
+        doReturn(UpperCaseTransformer.class).when(mock).getTransformer("upper");
+        doReturn(LowerCaseTransformer.class).when(mock).getTransformer("lower");
+
+        service.transformText(text, t);
+
+        verify(mock, times(2)).getTransformer("upper");
+        verify(mock, times(2)).getTransformer("lower");
+    }
 }
