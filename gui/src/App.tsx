@@ -80,6 +80,7 @@ function App() {
 
     return (
         <Container>
+            <Divider hidden/>
             <Input label={'Tekst'} fluid value={text} onChange={(event, data) => setText(data.value)}/>
             <SelectBag hook={hook}/>
             <Divider />

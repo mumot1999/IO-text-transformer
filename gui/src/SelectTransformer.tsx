@@ -15,7 +15,19 @@ text_to_acronym,
 upper
 }
 
-const options = $enum(TransformerType).map((value, key) => ({ key: key, value: key, text: key }))
+const translateName = {
+    acronym: "Rozszerz skróty",
+    capitalize_inversion: "Odwróć tekst z zachowaniem wielkości liter",
+    capitalize: "Wyrazy z wielkich liter",
+    latex: "Format Latex",
+    lower: "Zmień na małe litery",
+    number_to_text: "Transformuj liczby na słowa",
+    repetition_elimination: "Usuń powtórzenia",
+    text_to_acronym: "Skróć wyrazy",
+    upper: "Zamień wszystkie słowa na wielkie litery"
+}
+
+const options = $enum(TransformerType).map((value, key) => ({ key: key, value: key, text: translateName[key] }))
 
 interface Props {
     id: any
